@@ -1,0 +1,423 @@
+// > - TODO
+// - Responsive
+
+
+// 0 - ZERO
+@import url('//fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+
+$primary-color   = #4F52D2
+$secondary-color = #000000
+$gray-color      = #F1F1F1
+$black-color     = #2F2B2B
+$radius          = 3px
+
+
+// 1 - RESET
+@import '1-reset/*'
+
+
+// 2 - TOOLS
+@import '2-tool/*'
+typographic()
+
+
+// 3 - MIXINS
+@import '3-mixin/*'
+
+
+// 4 - BASICS
+@import '4-basic/*'
+
+
+// > - STYLE
+// @lost flexbox flex
+
+
+
+
+
+body
+	// lost-utility edit
+
+
+
+
+// >>> Pace
++above(568px)
+	.pace
+		pointer-events none
+		user-select none
+		
+		&-inactive
+			display none
+
+		.pace-progress
+			background lighten($primary-color, 80%)
+			position f 0px 100% 0 0 
+			z-index 2000
+			size 100% 2px
+
+
+
+
+// >>> Above
+.above
+	position r
+	z-index 1
+
+
+
+
+// >>> Contact
+.contact
+	position a 18px 0 0 20px
+	z-index 999
+	font-size 20px
+	line-height @font-size
+	color #FFF
+	
+	&:before
+		icon '\f003'
+		
+	&:hover
+		color darken(#FFF, 20%)
+
+
+
+
+// >>> Header
+.header
+	@extends .above
+	text-align center
+	background-color $primary-color
+	cover 'header.png'
+	padding-bottom 100px
+	
+	&:after
+		content ''
+		position a all
+		background-image 'flow.white.png'
+		background-position bottom
+		background-repeat repeat-x
+		background-size 100px
+	
+	.container
+		position r
+		z-index 99
+
+
+
+
+// >>> Brand
+.brand
+	color #FFF
+	
+	size 150px
+	margin-bottom -30px
+	+above(568px)
+		size 200px
+		margin-bottom -50px
+
+
+
+
+// >>> Description
+.description
+	font-weight 300
+	color #FFF
+
+	h1&
+		font-weight 600
+		
+		font-size 16px
+		+above(568px)
+			font-size 25px
+	
+	h2&
+		text-align justify
+		text-align-last center
+		
+		font-size 16px
+		margin 15px 10px 40px
+		+above(568px)
+			margin 15px 60px 40px
+		+above(768px)
+			font-size 20px
+			margin 15px 130px 40px
+
+
+
+
+// >>> Newsletter
+.newsletter
+	display flex
+	
+	margin 0 10px
+	flex-direction column
+	
+	+above(568px)
+		margin 0 60px
+	+above(768px)
+		margin 0 130px
+		flex-direction row
+		
+	&__submit
+	&__input 
+		margin 0 !important
+		height 43px
+		box-sizing border-box
+		padding-left 15px !important
+		padding-right 15px !important
+		outline none
+		font-size 14px !important
+		line-height 25px
+		
+	
+	&__input
+		background-color rgba(#FFF, 0%)
+		border 1px solid rgba(#FFF, 20%)
+		color #FFF
+		transition border-color .2s
+		flex 1 0 auto
+		border-radius $radius $radius 0 0
+		text-align center
+		+above(768px)
+			margin-right 10px !important
+			border-radius $radius
+			text-align left
+		+placeholder()
+			color rgba(#FFF, 50%)
+		
+		&:focus
+			border-color rgba(#FFF, 80%)
+	
+	&__submit
+		background-color rgba(#FFF, 90%)
+		border none
+		text-transform uppercase
+		font-weight 600
+		color $primary-color
+		transition background-color .2s
+		border-radius 0 0 $radius $radius
+		+above(768px)
+			border-radius $radius
+		&:hover 
+			background-color #FFF
+
+
+
+
+// >>> Featured
+.featured
+	@extends .above
+	text-align center
+	padding-bottom 40px
+	background-color #FFF
+	
+	.container
+		box-sizing border-box
+		+above(568px)
+			padding 0 60px
+		+above(768px)
+			padding 0 130px
+	
+	&__heading
+		font-size 16px
+		font-weight 300
+		margin-bottom 15px
+	
+	&__image
+		img-responsive()
+		opacity .6
+
+
+
+
+// >>> Main
+.main
+	@extends .above
+	background-color #FFF
+	
+	padding-bottom 40px
+	+above(568px)
+		margin-bottom 350px
+
+
+
+// >>> Stick
+.stick
+	border 1px solid rgba($primary-color, .15)
+	lost-column 1
+	margin-bottom 20px
+	padding 20px
+	box-sizing border-box
+	border-radius $radius
+	b
+		font-weight 600
+	p
+		margin 0
+
+
+
+
+// >>> Item
+.item
+	position r
+	border 1px solid rgba($primary-color, .15)
+	border-radius $radius
+	box-sizing border-box
+	box-shadow 0 0 20px rgba(#000, .02)
+	
+	lost-column 1
+	margin-bottom 10px
+	+above(568px)
+		lost-column 1/2 2 20px
+		margin-bottom 20px
+	+above(768px)
+		lost-column 1/3 3 20px
+	&:hover
+		box-shadow 0 0 20px rgba(#000, .1)
+
+
+	&__heading
+		display none
+	
+
+	&__price
+		position a 5px 5px 0 0
+		background-color #000
+		color #FFF
+		display inline-block
+		border-radius $radius
+		padding 0 10px
+		font-size 14px
+		line-height 25px
+	
+
+	&__image
+		box-sizing border-box
+		padding 20px
+		
+		+above(568px)
+			// padding 10px
+			min-height 262.72px
+		+above(768px)
+			min-height 234.41px
+			
+		&:before
+			icon '\f03e'
+			position a 50% 50% 0 0
+			transform translate(50%, -100%)
+			color #EEE
+			font-size 25px
+			z-index -1
+
+		img
+			img-responsive()
+			background-color #FFF
+			border-radius $radius
+
+	
+	&__download
+		position r
+		display block
+		color #FFF
+		font-weight 600
+		text-align center
+		padding 0px 5px 7px
+		text-transform uppercase
+		color rgba(#FFF, .85)
+		margin-top 20px
+		font-size 14px
+		line-height 25px
+		
+		span
+			position r
+			z-index 999
+		
+		&:before
+		&:after
+			opacity 1
+			transition all .2s ease-in-out
+		
+		&:before
+			content ''
+			height 25px
+			position a -25px 0px 0 0px
+			background-image 'flow.color.png'
+			background-position bottom
+			background-repeat repeat-x
+			background-size 60px
+			
+		&:after
+			content ''
+			position a all
+			background-color $primary-color
+			border-radius 0 0 $radius $radius
+
+		&:hover
+			color #FFF
+			&:before
+			&:after
+				opacity .9
+
+
+
+
+// >>> Footer
+.footer
+	position f 0 0px 0px 0px
+	z-index -1
+	height 350px
+	overflow hidden
+	background-color #000
+	
+	+below(568px)
+		display none
+	
+	&:after
+		content ''
+		position a all
+		background-image 'fairpixels.png'
+		background-position center center
+		background-size 80px
+		background-repeat no-repeat
+		z-index 2
+		
+
+	&__nav
+		position a 0 0px 0px 0px
+		z-index 4
+		
+	&__list
+		list-unstyled()
+		display flex
+		margin-bottom 20px
+		justify-content center
+		
+	&__item:not(:last-child)
+		margin-right 20px
+		
+	&__anchor
+		color #FFF
+		font-weight 600
+		&:hover
+			color $primary-color
+			
+
+	&__link
+		position a all
+		z-index 3
+
+	&__link:hover + &__video
+		opacity .2
+		
+
+	&__video
+		position a all
+		width 100%
+		transform translateY(-33.33%)
+		opacity .3
+		z-index 1
+		
+		transition all .2s ease-in-out

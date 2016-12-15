@@ -1,0 +1,42 @@
+- var n = site.logos;
+- var special = site.logos - 1;
+
+main.main
+	.container
+
+		.stick
+			p
+				b
+					i Free
+					|  &amp; Open Sourced Logos
+				br
+				| The logos below can be downloaded 
+				b: i unlimited
+				|  times and used by 
+				b: i anyone
+				| . For personal &amp; commercial projects. No attribution required. Perfect for mvp's and mockups.
+
+	.container
+
+		while n > 0
+
+			article.item(data-aos='fade')
+				h2.item__heading logo #{n}
+				.item__price Free
+				.item__image
+					img(src='http://logodust.com/img/free/logo' + n + '.png', alt='logo' + n)
+				footer.item__footer
+					a.item__download(href='http://logodust.com/files/free/logo' + n + '.zip')
+						span Download
+
+			if ( n == special )
+				article.item(data-aos='fade')
+					h2.item__heading Need help growing your startup?
+					.item__price Special
+					.item__image
+						img(src='http://logodust.com/img/paid/growth.png', alt='Need help growing your startup?')
+					footer.item__footer
+						a.item__download(href='http://www.traction.vc/index.html')
+							span Download
+
+			- n--

@@ -1,0 +1,6 @@
+//- script
+mixin script(source, unminified)
+	if unminified
+		script(src=dist.js + source + '.js?v=' + site.version)
+	else
+		script(src=dist.js + source + '.min.js?v=' + site.version)

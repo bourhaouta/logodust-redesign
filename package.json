@@ -1,0 +1,29 @@
+{
+  "name": "logodust-redesign",
+  "version": "0.1.0",
+  "description": "logodust.com Redesign",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bourhaouta",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "*",
+    "browser-sync": "*",
+    "cssnano": "*",
+    "dev-ip": "*",
+    "gulp": "*",
+    "gulp-concat": "*",
+    "gulp-html-beautify": "*",
+    "gulp-html-prettify": "*",
+    "gulp-plumber": "*",
+    "gulp-postcss": "*",
+    "gulp-pug": "*",
+    "gulp-rename": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-stylus": "*",
+    "gulp-uglify": "*",
+    "lost": "*"
+  }
+}
